@@ -1,0 +1,518 @@
+/* ============================================
+   MODERN JOB APPLICATION TRACKER CSS
+   Vibrant, Fresh, and Engaging Design
+============================================ */
+
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- HEADER - MODERN ---------- */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+header:hover {
+    transform: translateY(-5px);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+header h1 i {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: #764ba2;
+    margin-right: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* ---------- STATS SECTION - GLOWING CARDS ---------- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 i {
+    margin-right: 5px;
+    font-size: 0.8rem;
+}
+
+.stat-card p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Different colors for each stat card */
+.stat-card:nth-child(1) p { background: linear-gradient(135deg, #3b82f6, #1e40af); -webkit-background-clip: text; background-clip: text; }
+.stat-card:nth-child(2) p { background: linear-gradient(135deg, #10b981, #047857); -webkit-background-clip: text; background-clip: text; }
+.stat-card:nth-child(3) p { background: linear-gradient(135deg, #f59e0b, #d97706); -webkit-background-clip: text; background-clip: text; }
+.stat-card:nth-child(4) p { background: linear-gradient(135deg, #8b5cf6, #6d28d9); -webkit-background-clip: text; background-clip: text; }
+
+/* ---------- FORM SECTION - MODERN ---------- */
+.add-form {
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.add-form:hover {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.add-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.add-form h2 i {
+    color: #764ba2;
+    margin-right: 10px;
+}
+
+.add-form h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+#application-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#application-form input,
+#application-form select {
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+#application-form input:focus,
+#application-form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    background: white;
+}
+
+#application-form button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#application-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+#application-form button i {
+    font-size: 1.1rem;
+}
+
+/* ---------- APPLICATIONS LIST SECTION ---------- */
+.applications-list {
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.applications-list h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.applications-list h2 i {
+    color: #764ba2;
+    margin-right: 10px;
+}
+
+.applications-list h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* ---------- FILTER BUTTONS - MODERN ---------- */
+.filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ---------- APPLICATION CARDS - MODERN ---------- */
+.application-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.application-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(180deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+}
+
+.application-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+}
+
+.application-card:hover::before {
+    width: 8px;
+}
+
+.application-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.application-info p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.application-info i {
+    margin-right: 8px;
+    color: #764ba2;
+    width: 20px;
+}
+
+/* ---------- STATUS DROPDOWN - STYLISH ---------- */
+.status-select {
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 8px;
+}
+
+.status-select.Applied {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-select.Interview {
+    background: #fed7aa;
+    color: #9a3412;
+}
+
+.status-select.Offer {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-select.Rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-select:hover {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+.application-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.application-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.edit-btn {
+    color: #8b5cf6;
+}
+
+.edit-btn:hover {
+    background: #ede9fe;
+    transform: scale(1.1);
+}
+
+.delete-btn {
+    color: #ef4444;
+}
+
+.delete-btn:hover {
+    background: #fee2e2;
+    transform: scale(1.1);
+}
+
+/* ---------- EMPTY STATE ---------- */
+.no-applications {
+    text-align: center;
+    padding: 60px 20px;
+    color: #9ca3af;
+    font-size: 1.1rem;
+    background: #f9fafb;
+    border-radius: 20px;
+    border: 2px dashed #e5e7eb;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-card {
+        padding: 18px 15px;
+    }
+    
+    .stat-card p {
+        font-size: 1.8rem;
+    }
+    
+    #application-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .application-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .application-card::before {
+        width: 100%;
+        height: 5px;
+        top: 0;
+        bottom: auto;
+        left: 0;
+    }
+    
+    .application-card:hover::before {
+        height: 6px;
+    }
+    
+    .application-actions {
+        justify-content: center;
+    }
+    
+    .add-form,
+    .applications-list {
+        padding: 25px 20px;
+    }
+    
+    .filters {
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .add-form h2,
+    .applications-list h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ---------- SMOOTH SCROLLING ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- CUSTOM SCROLLBAR ---------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a67d8;
+}

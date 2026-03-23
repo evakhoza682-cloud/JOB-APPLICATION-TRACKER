@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker | Track Your Career Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1><i class="fas fa-briefcase"></i> Job Application Tracker</h1>
+            <p>Track your job applications across any industry | Stay organized, stay motivated</p>
+        </header>
+
+        <!-- Statistics Dashboard -->
+        <section class="stats">
+            <div class="stat-card">
+                <h3><i class="fas fa-chart-line"></i> Total Applications</h3>
+                <p id="total-apps">0</p>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-paper-plane"></i> Applied</h3>
+                <p id="stat-applied">0</p>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-chalkboard-user"></i> Interview</h3>
+                <p id="stat-interview">0</p>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-trophy"></i> Offer</h3>
+                <p id="stat-offer">0</p>
+            </div>
+        </section>
+
+        <!-- Add Application Form -->
+        <section class="add-form">
+            <h2><i class="fas fa-plus-circle"></i> Add New Application</h2>
+            <form id="application-form">
+                <input type="text" id="company" placeholder="🏢 Company / Organization Name" required>
+                <input type="text" id="role" placeholder="💼 Position / Job Title" required>
+                <input type="date" id="date" required>
+                <select id="status" required>
+                    <option value="">📌 Select Status</option>
+                    <option value="Applied">📝 Applied - Waiting to hear back</option>
+                    <option value="Interview">🎯 Interview - Got an interview</option>
+                    <option value="Offer">🎉 Offer - Received an offer</option>
+                    <option value="Rejected">❌ Rejected - Not selected</option>
+                </select>
+                <button type="submit"><i class="fas fa-save"></i> Save Application</button>
+            </form>
+        </section>
+
+        <!-- Applications List -->
+        <section class="applications-list">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">📋 All Applications</button>
+                <button class="filter-btn" data-filter="Applied">📝 Applied</button>
+                <button class="filter-btn" data-filter="Interview">🎯 Interview</button>
+                <button class="filter-btn" data-filter="Offer">🎉 Offer</button>
+                <button class="filter-btn" data-filter="Rejected">❌ Rejected</button>
+            </div>
+            <h2><i class="fas fa-list-check"></i> Your Applications</h2>
+            <div id="applications-container">
+                <!-- Applications will be inserted here by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
